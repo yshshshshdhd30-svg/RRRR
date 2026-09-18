@@ -1,0 +1,18 @@
+ملف مشروع جاهز للرفع إلى GitHub
+
+مهم: ارفع محتويات هذا المجلد إلى جذر المستودع، وليس ملف ZIP نفسه.
+
+الترتيب الصحيح يجب أن يكون:
+index.html
+package.json
+vite.config.ts
+src/App.tsx
+src/main.tsx
+src/firebase/authContext.tsx
+src/firebase/config.ts
+src/components/...
+server/...
+
+بعد الرفع اعمل Commit changes، ثم أعد تشغيل Build في Cloudflare.
+
+سبب الخطأ السابق كان أن Cloudflare كان يبني App.tsx من جذر المستودع بدل src/App.tsx، أو أن مجلد src/firebase لم يكن مرفوعًا. في هذا الملف المسارات الصحيحة موجودة بالفعل.
